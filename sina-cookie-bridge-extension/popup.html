@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <header>
+    <img src="images/icon48.png" width="28" height="28" alt="" />
+    <div><h1>SINA Cookie Bridge</h1><div class="sub" id="ver">Real-time local sync</div></div>
+    <span id="dot" class="dot"></span>
+  </header>
+  <div id="status" class="status">Checking…</div>
+  <div class="stats">
+    <div class="stat"><span id="count">0</span><label>cookies</label></div>
+    <div class="stat"><span id="last">—</span><label>last push</label></div>
+    <div class="stat"><span id="pushes">0</span><label>syncs</label></div>
+  </div>
+  <div id="domains" class="domains"></div>
+  <label class="toggle"><input type="checkbox" id="auto" checked /> Auto-push (real time)</label>
+  <button id="push">Push cookies now</button>
+  <button id="export" class="secondary">Export cookies.txt…</button>
+  <div class="row"><a href="#" id="options">Options</a><span class="hint">Ctrl+Shift+S</span></div>
+  <p class="hint">Syncs automatically when the SINA app opens. Sent only to 127.0.0.1 — never leaves your computer.</p>
+  <script src="popup.mjs" type="module"></script>
+</body>
+</html>

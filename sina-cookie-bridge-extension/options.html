@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head><meta charset="utf-8" /><link rel="stylesheet" href="popup.css" /></head>
+<body style="width:320px">
+  <header><img src="images/icon48.png" width="28" height="28" alt="" /><div><h1>Bridge Options</h1><div class="sub">SINA Cookie Bridge v3</div></div></header>
+  <label class="toggle"><input type="checkbox" id="auto" checked /> Auto-push cookies (real time)</label>
+  <label class="toggle"><input type="checkbox" id="notify" /> Notify on connect / disconnect</label>
+  <div class="field">
+    <label for="domainMode">Cookies to sync</label>
+    <select id="domainMode">
+      <option value="all">All sites (maximum compatibility)</option>
+      <option value="media">Media sites only (YouTube, Google, Instagram…)</option>
+    </select>
+  </div>
+  <div class="status" id="conn">Testing connection…</div>
+  <button id="test">Test connection</button>
+  <button id="push" class="secondary" style="margin-top:8px;background:#16a34a">Push cookies now</button>
+  <p class="hint">The extension connects automatically when the SINA app opens and pushes cookie changes within ~1.5s. The app listens on 127.0.0.1 only with a private token; cookies never leave your computer.</p>
+  <script src="options.mjs" type="module"></script>
+</body>
+</html>
